@@ -1,2 +1,1 @@
-# design_patterns
-Software Design Patterns samples
+# Software Design Patterns - sample code in C&#35;
