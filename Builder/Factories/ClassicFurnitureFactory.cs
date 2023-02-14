@@ -1,24 +1,24 @@
-namespace Furniture.Factories;
+namespace AbstractFactory.Factories;
 
 using Contracts;
 using Products.Attributes;
+using Products.Classic;
 using Products.Contracts;
-using Products.Modern;
 
-public class ModernFurnitureFactory : FurnitureFactory
+public class ClassicFurnitureFactory : FurnitureFactory
 {
     public override Armchair MakeArmchair(Color color, Width width, Height height, Depth depth)
     {
-        return new ModernArmchair(color, width, height, depth);
+        return new ClassicArmchair(color, width, height, depth);
     }
 
     public override CoffeeTable MakeCoffeeTable(Color color, Width width, Height height, Length length)
     {
-        return new ModernCoffeeTable(color, width, height, length);
+        return new ClassicCoffeeTable(color, width, height, length);
     }
 
     public override Sofa MakeSofa(Color color, Width width, Height height, Depth depth)
     {
-        return new ModernSofa(color, width, height, depth);
+        return new ClassicSofa(color, width, height, depth);
     }
 }

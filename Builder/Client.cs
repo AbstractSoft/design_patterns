@@ -1,8 +1,8 @@
-namespace Furniture;
+namespace AbstractFactory;
 
 using Factories.Contracts;
-using Furniture.Products.Attributes.Contracts;
 using Products.Attributes;
+using Products.Attributes.Contracts;
 
 public class Client
 {
@@ -10,7 +10,7 @@ public class Client
     {
         Console.WriteLine("Start producing furniture...");
         Console.WriteLine();
-
+        
         var brown = new Color("brown");
 
         var armchair = factory.MakeArmchair(
@@ -21,7 +21,7 @@ public class Client
 
         Console.WriteLine("The {0} was produced!", armchair.ToString());
         Console.WriteLine();
-
+        
         var sofa = factory.MakeSofa(
             brown,
             new Width(210, Dimension.Metric.Centimeters),

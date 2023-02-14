@@ -1,4 +1,4 @@
-namespace AbstractFactory.Products.Contracts;
+namespace Furniture.Products.Contracts;
 
 using Attributes;
 

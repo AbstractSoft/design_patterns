@@ -1,4 +1,4 @@
-namespace Furniture.Products.Attributes;
+namespace AbstractFactory.Products.Attributes;
 
 public class Color
 {

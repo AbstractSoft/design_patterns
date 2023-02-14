@@ -1,4 +1,4 @@
-namespace Furniture.Products.Attributes.Contracts;
+namespace AbstractFactory.Products.Attributes.Contracts;
 
 public abstract class Dimension
 {

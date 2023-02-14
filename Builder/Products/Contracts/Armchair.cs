@@ -1,10 +1,10 @@
-namespace Furniture.Products.Contracts;
+namespace AbstractFactory.Products.Contracts;
 
 using Attributes;
 
-public abstract class Sofa : Product
+public abstract class Armchair : Product
 {
-    protected Sofa(Color color, Width width, Height height, Depth depth)
+    protected Armchair(Color color, Width width, Height height, Depth depth)
         : base(color)
     {
         Width = width;

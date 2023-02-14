@@ -1,5 +1,5 @@
-﻿using Furniture;
-using Furniture.Factories;
+﻿using AbstractFactory;
+using AbstractFactory.Factories;
 
 public class Program
 {
