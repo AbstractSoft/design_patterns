@@ -1,11 +1,11 @@
-namespace AbstractFactory.Products.Attributes;
+namespace Furniture.Products.Attributes;
 
 public class Color
 {
-    public Color(string value)
+    public Color()
     {
-        Value = value;
+        Value = "white";
     }
 
-    public string Value { get; }
+    public string Value { get; init; }
 }

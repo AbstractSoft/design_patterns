@@ -1,11 +1,5 @@
-namespace AbstractFactory.Products.Attributes;
+namespace Furniture.Products.Attributes;
 
 using Contracts;
 
-public class Length : Dimension
-{
-    public Length(int Value, Metric measurementUnit)
-        : base(Value, measurementUnit)
-    {
-    }
-}
+public class Length : Dimension { }

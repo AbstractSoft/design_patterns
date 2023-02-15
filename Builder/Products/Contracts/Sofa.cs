@@ -1,18 +1,10 @@
-namespace AbstractFactory.Products.Contracts;
+namespace Furniture.Products.Contracts;
 
 using Attributes;
 
 public abstract class Sofa : Product
 {
-    protected Sofa(Color color, Width width, Height height, Depth depth)
-        : base(color)
-    {
-        Width = width;
-        Height = height;
-        Depth = depth;
-    }
-
-    public Width Width { get; }
-    public Height Height { get; }
-    public Depth Depth { get; }
+    public Width Width { get; init; } = default!;
+    public Height Height { get; init; } = default!;
+    public Depth Depth { get; init; } = default!;
 }

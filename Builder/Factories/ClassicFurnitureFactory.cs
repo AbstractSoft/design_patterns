@@ -1,24 +1,30 @@
-namespace AbstractFactory.Factories;
+namespace Furniture.Factories;
 
 using Contracts;
-using Products.Attributes;
+using Furniture.Products.Builders;
+using Furniture.Products.Modern;
 using Products.Classic;
 using Products.Contracts;
 
 public class ClassicFurnitureFactory : FurnitureFactory
 {
-    public override Armchair MakeArmchair(Color color, Width width, Height height, Depth depth)
+    public override Armchair MakeArmchair()
     {
-        return new ClassicArmchair(color, width, height, depth);
+        return new ClassicArmchair();
     }
 
-    public override CoffeeTable MakeCoffeeTable(Color color, Width width, Height height, Length length)
+    public override CoffeeTable MakeCoffeeTable()
     {
-        return new ClassicCoffeeTable(color, width, height, length);
+        var coffeeTableBuilder = new CoffeeTableBuilder<ClassicCoffeeTable>();
+        coffeeTableBuilder.BuildTableLegs();
+        coffeeTableBuilder.BuildTablePlate();
+        coffeeTableBuilder.BuildTableHandles();
+
+        return coffeeTableBuilder.GetResult();
     }
 
-    public override Sofa MakeSofa(Color color, Width width, Height height, Depth depth)
+    public override Sofa MakeSofa()
     {
-        return new ClassicSofa(color, width, height, depth);
+        return new ClassicSofa();
     }
 }

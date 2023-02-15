@@ -8,4 +8,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Products\Builders\" />
+    <None Remove="Products\Builders\Contracts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Products\Builders\" />
+    <Folder Include="Products\Builders\Contracts\" />
+  </ItemGroup>
 </Project>

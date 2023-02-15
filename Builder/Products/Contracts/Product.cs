@@ -1,15 +1,10 @@
-namespace AbstractFactory.Products.Contracts;
+namespace Furniture.Products.Contracts;
 
 using Attributes;
 
 public abstract class Product
 {
-    protected Product(Color color)
-    {
-        Color = color;
-    }
-
-    public Color Color { get; }
+    public Color Color { get; init; } = default!;
 
     public new string ToString()
     {

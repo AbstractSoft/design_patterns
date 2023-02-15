@@ -1,4 +1,4 @@
-namespace AbstractFactory.Products.Attributes.Contracts;
+namespace Furniture.Products.Attributes.Contracts;
 
 public abstract class Dimension
 {
@@ -9,14 +9,14 @@ public abstract class Dimension
         Meters
     }
 
-    protected Dimension(int value, Metric measurementUnit)
+    protected Dimension()
     {
-        Value = value;
-        MeasurementUnit = measurementUnit;
+        Value = 0;
+        MeasurementUnit = Metric.Centimeters;
     }
 
-    public int Value { get; }
-    public Metric MeasurementUnit { get; }
+    public int Value { get; init; }
+    public Metric MeasurementUnit { get; init; }
 
     public int GetValueInMillimeters()
     {
