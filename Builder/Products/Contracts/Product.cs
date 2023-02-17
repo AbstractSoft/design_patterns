@@ -4,7 +4,7 @@ using Attributes;
 
 public abstract class Product
 {
-    public Color Color { get; init; } = default!;
+    public Color Color { get; init; } = Color.GetNullValue();
 
     public new string ToString()
     {
