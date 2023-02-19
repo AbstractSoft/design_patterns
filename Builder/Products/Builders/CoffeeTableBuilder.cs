@@ -1,8 +1,6 @@
 ﻿namespace Furniture.Products.Builders;
 
-using Furniture.Products.Attributes;
 using Furniture.Products.Builders.Contracts;
-using Furniture.Products.Classic;
 using Furniture.Products.Contracts;
 
 public class CoffeeTableBuilder<T> : ProductBuilder<T>
