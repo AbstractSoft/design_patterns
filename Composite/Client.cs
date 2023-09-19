@@ -13,19 +13,19 @@ public abstract class Client
         IOrganizationComponent employee4 = new Employee("Eve Williams", "Manager");
 
         // Create departments
-        IOrganizationComponent engineeringDepartment = new Department("Engineering");
-        IOrganizationComponent hrDepartment = new Department("HR");
+        IOrganizationComponent engineeringDepartment = new OrganizationalUnit("Engineering");
+        IOrganizationComponent hrDepartment = new OrganizationalUnit("HR");
 
         // Add employees to departments
-        ((Department)engineeringDepartment).Add(employee1);
-        ((Department)engineeringDepartment).Add(employee2);
-        ((Department)engineeringDepartment).Add(employee3);
-        ((Department)hrDepartment).Add(employee4);
+        ((OrganizationalUnit)engineeringDepartment).Add(employee1);
+        ((OrganizationalUnit)engineeringDepartment).Add(employee2);
+        ((OrganizationalUnit)engineeringDepartment).Add(employee3);
+        ((OrganizationalUnit)hrDepartment).Add(employee4);
 
         // Create the organization structure
-        IOrganizationComponent organization = new Department("Company");
-        ((Department)organization).Add(engineeringDepartment);
-        ((Department)organization).Add(hrDepartment);
+        IOrganizationComponent organization = new OrganizationalUnit("Company");
+        ((OrganizationalUnit)organization).Add(engineeringDepartment);
+        ((OrganizationalUnit)organization).Add(hrDepartment);
 
         organization.DisplayInfo();
     }

@@ -5,12 +5,12 @@ using Contracts;
 /// <summary>
 /// Composite class representing a department
 /// </summary>
-public class Department : IOrganizationComponent
+public class OrganizationalUnit : IOrganizationComponent
 {
     private readonly string _name;
     private readonly List<IOrganizationComponent> _items = new();
 
-    public Department(string name)
+    public OrganizationalUnit(string name)
     {
         _name = name;
     }
@@ -22,7 +22,7 @@ public class Department : IOrganizationComponent
 
     public void DisplayInfo()
     {
-        Console.WriteLine($"Department: {_name}");
+        Console.WriteLine($"OrganizationalUnit: {_name}");
         foreach (var employee in _items)
         {
             employee.DisplayInfo();
