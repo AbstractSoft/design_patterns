@@ -8,22 +8,22 @@ using Contracts;
 public class Department : IOrganizationComponent
 {
     private readonly string _name;
-    private readonly List<IOrganizationComponent> _employees = new();
+    private readonly List<IOrganizationComponent> _items = new();
 
     public Department(string name)
     {
         _name = name;
     }
 
-    public void AddEmployee(IOrganizationComponent employee)
+    public void Add(IOrganizationComponent item)
     {
-        _employees.Add(employee);
+        _items.Add(item);
     }
 
     public void DisplayInfo()
     {
         Console.WriteLine($"Department: {_name}");
-        foreach (var employee in _employees)
+        foreach (var employee in _items)
         {
             employee.DisplayInfo();
         }

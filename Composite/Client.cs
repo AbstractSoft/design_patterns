@@ -17,15 +17,15 @@ public abstract class Client
         IOrganizationComponent hrDepartment = new Department("HR");
 
         // Add employees to departments
-        ((Department)engineeringDepartment).AddEmployee(employee1);
-        ((Department)engineeringDepartment).AddEmployee(employee2);
-        ((Department)engineeringDepartment).AddEmployee(employee3);
-        ((Department)hrDepartment).AddEmployee(employee4);
+        ((Department)engineeringDepartment).Add(employee1);
+        ((Department)engineeringDepartment).Add(employee2);
+        ((Department)engineeringDepartment).Add(employee3);
+        ((Department)hrDepartment).Add(employee4);
 
         // Create the organization structure
         IOrganizationComponent organization = new Department("Company");
-        ((Department)organization).AddEmployee(engineeringDepartment);
-        ((Department)organization).AddEmployee(hrDepartment);
+        ((Department)organization).Add(engineeringDepartment);
+        ((Department)organization).Add(hrDepartment);
 
         organization.DisplayInfo();
     }
