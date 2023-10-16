@@ -4,7 +4,10 @@ using Contracts;
 
 public class MilkDecorator : CoffeeDecorator
 {
-    public MilkDecorator(ICoffee coffee) : base(coffee) { }
+    public MilkDecorator(ICoffee coffee)
+        : base(coffee)
+    {
+    }
 
     public override string GetDescription()
     {
