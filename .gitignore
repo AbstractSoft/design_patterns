@@ -351,3 +351,5 @@ MigrationBackup/
 
 *.svg
 .idea/
+
+._*
