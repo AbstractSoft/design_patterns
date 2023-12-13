@@ -10,7 +10,7 @@ public class CharacterFormatting(string font, ConsoleColor color)
 }
 
 // Example Usage
-public class Program
+public static class Program
 {
     public static void Main()
     {
